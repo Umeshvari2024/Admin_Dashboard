@@ -9,7 +9,7 @@
   <title>Admin Dashboard</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- FONT AWESOME -->
   <link rel="stylesheet"
@@ -23,66 +23,63 @@
 
   <aside class="sidebar" id="sidebar">
 
-    <div class="logo">
+    <div>
 
-      <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png">
+      <div class="logo">
 
-      <h2>AdminPro</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png">
+
+        <h2>AdminPro</h2>
+
+      </div>
+
+      <ul class="menu">
+
+        <li class="active">
+          <a href="#dashboard">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="#analytics">
+            <i class="fa-solid fa-chart-pie"></i>
+            Analytics
+          </a>
+        </li>
+
+        <li>
+          <a href="#customers">
+            <i class="fa-solid fa-users"></i>
+            Customers
+          </a>
+        </li>
+
+        <li>
+          <a href="#orders">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Orders
+          </a>
+        </li>
+
+        <li>
+          <a href="#products">
+            <i class="fa-solid fa-box"></i>
+            Products
+          </a>
+        </li>
+
+        <li>
+          <a href="#settings">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+          </a>
+        </li>
+
+      </ul>
 
     </div>
-
-    <ul class="menu">
-
-      <li class="active">
-        <a href="#">
-          <i class="fa-solid fa-house"></i>
-          Dashboard
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          <i class="fa-solid fa-users"></i>
-          Users
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          <i class="fa-solid fa-box"></i>
-          Products
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          <i class="fa-solid fa-cart-shopping"></i>
-          Orders
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          <i class="fa-solid fa-chart-pie"></i>
-          Analytics
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          <i class="fa-solid fa-bell"></i>
-          Notifications
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          <i class="fa-solid fa-gear"></i>
-          Settings
-        </a>
-      </li>
-
-    </ul>
 
     <!-- PROFILE -->
 
@@ -91,8 +88,8 @@
       <img src="https://i.pravatar.cc/100">
 
       <div>
-        <h3>Admin User</h3>
-        <p>Super Admin</p>
+        <h3>Monthly Target</h3>
+        <p>85% Completed</p>
       </div>
 
     </div>
@@ -120,8 +117,6 @@
 
       <div class="right-nav">
 
-        <!-- SEARCH -->
-
         <div class="search-box">
 
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -130,25 +125,26 @@
 
         </div>
 
-        <!-- DARK MODE -->
-
         <button id="themeToggle">
 
           <i class="fa-solid fa-moon"></i>
 
         </button>
 
-        <!-- PROFILE -->
+        <!-- ADMIN NAME -->
 
-        <img src="https://i.pravatar.cc/150">
+        <div class="admin-name">
+          <h3>Umeshvari Badgujar</h3>
+          <p>Administrator</p>
+        </div>
 
       </div>
 
     </nav>
 
-    <!-- CARDS -->
+    <!-- DASHBOARD CARDS -->
 
-    <section class="cards">
+    <section class="cards" id="dashboard">
 
       <div class="card">
 
@@ -208,7 +204,306 @@
 
     </section>
 
+    <!-- CHARTS -->
+
+    <section class="charts" id="analytics">
+
+      <div class="chart-card">
+
+        <h2>Sales Analytics</h2>
+
+        <canvas id="salesChart"></canvas>
+
+      </div>
+
+      <div class="chart-card">
+
+        <h2>User Growth</h2>
+
+        <canvas id="userChart"></canvas>
+
+      </div>
+
+    </section>
+
+    <!-- CUSTOMERS -->
+
+    <section id="customers" class="table-section">
+
+      <div class="table-card">
+
+        <h2>Customers List</h2>
+
+        <table>
+
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+          </tr>
+
+          <tr>
+            <td>Rahul Sharma</td>
+            <td>rahul@gmail.com</td>
+            <td>Active</td>
+          </tr>
+
+          <tr>
+            <td>Priya Patil</td>
+            <td>priya@gmail.com</td>
+            <td>Inactive</td>
+          </tr>
+
+          <tr>
+            <td>Amit Verma</td>
+            <td>amit@gmail.com</td>
+            <td>Active</td>
+          </tr>
+
+          <tr>
+            <td>Sneha Joshi</td>
+            <td>sneha@gmail.com</td>
+            <td>Pending</td>
+          </tr>
+
+          <tr>
+            <td>Rohit Kale</td>
+            <td>rohit@gmail.com</td>
+            <td>Active</td>
+          </tr>
+
+          <tr>
+            <td>Pooja More</td>
+            <td>pooja@gmail.com</td>
+            <td>Inactive</td>
+          </tr>
+
+          <tr>
+            <td>Karan Singh</td>
+            <td>karan@gmail.com</td>
+            <td>Active</td>
+          </tr>
+
+          <tr>
+            <td>Neha Kulkarni</td>
+            <td>neha@gmail.com</td>
+            <td>Pending</td>
+          </tr>
+
+        </table>
+
+      </div>
+
+    </section>
+
+    <!-- ORDERS -->
+
+    <section id="orders" class="table-section">
+
+      <div class="table-card">
+
+        <h2>Recent Orders</h2>
+
+        <table>
+
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Status</th>
+            <th>Amount</th>
+          </tr>
+
+          <tr>
+            <td>#1024</td>
+            <td>Rahul Sharma</td>
+            <td>Completed</td>
+            <td>₹4,500</td>
+          </tr>
+
+          <tr>
+            <td>#1025</td>
+            <td>Priya Patil</td>
+            <td>Pending</td>
+            <td>₹2,100</td>
+          </tr>
+
+          <tr>
+            <td>#1026</td>
+            <td>Amit Verma</td>
+            <td>Completed</td>
+            <td>₹7,800</td>
+          </tr>
+
+          <tr>
+            <td>#1027</td>
+            <td>Sneha Joshi</td>
+            <td>Cancelled</td>
+            <td>₹1,200</td>
+          </tr>
+
+          <tr>
+            <td>#1028</td>
+            <td>Rohit Kale</td>
+            <td>Pending</td>
+            <td>₹5,400</td>
+          </tr>
+
+          <tr>
+            <td>#1029</td>
+            <td>Pooja More</td>
+            <td>Completed</td>
+            <td>₹9,100</td>
+          </tr>
+
+          <tr>
+            <td>#1030</td>
+            <td>Karan Singh</td>
+            <td>Processing</td>
+            <td>₹3,600</td>
+          </tr>
+
+          <tr>
+            <td>#1031</td>
+            <td>Neha Kulkarni</td>
+            <td>Completed</td>
+            <td>₹6,250</td>
+          </tr>
+
+        </table>
+
+      </div>
+
+    </section>
+
+    <!-- PRODUCTS -->
+
+    <section id="products" class="table-section">
+
+      <div class="table-card">
+
+        <h2>Products</h2>
+
+        <table>
+
+          <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+          </tr>
+
+          <tr>
+            <td>Laptop</td>
+            <td>Electronics</td>
+            <td>₹55,000</td>
+            <td>15</td>
+          </tr>
+
+          <tr>
+            <td>Mobile</td>
+            <td>Electronics</td>
+            <td>₹22,000</td>
+            <td>40</td>
+          </tr>
+
+          <tr>
+            <td>Headphones</td>
+            <td>Accessories</td>
+            <td>₹2,500</td>
+            <td>85</td>
+          </tr>
+
+          <tr>
+            <td>Keyboard</td>
+            <td>Accessories</td>
+            <td>₹1,800</td>
+            <td>60</td>
+          </tr>
+
+          <tr>
+            <td>Mouse</td>
+            <td>Accessories</td>
+            <td>₹900</td>
+            <td>120</td>
+          </tr>
+
+          <tr>
+            <td>Smart Watch</td>
+            <td>Wearables</td>
+            <td>₹6,500</td>
+            <td>35</td>
+          </tr>
+
+          <tr>
+            <td>Tablet</td>
+            <td>Electronics</td>
+            <td>₹18,000</td>
+            <td>22</td>
+          </tr>
+
+          <tr>
+            <td>Bluetooth Speaker</td>
+            <td>Audio</td>
+            <td>₹3,200</td>
+            <td>48</td>
+          </tr>
+
+        </table>
+
+      </div>
+
+    </section>
+
+    <!-- SETTINGS -->
+
+    <section id="settings" class="table-section">
+
+      <div class="table-card">
+
+        <h2>Settings</h2>
+
+        <table>
+
+          <tr>
+            <th>Setting</th>
+            <th>Status</th>
+          </tr>
+
+          <tr>
+            <td>Dark Mode</td>
+            <td>Enabled</td>
+          </tr>
+
+          <tr>
+            <td>Email Notifications</td>
+            <td>Active</td>
+          </tr>
+
+          <tr>
+            <td>Auto Backup</td>
+            <td>Enabled</td>
+          </tr>
+
+          <tr>
+            <td>Security Alerts</td>
+            <td>Active</td>
+          </tr>
+
+        </table>
+
+        <br>
+
+        <button class="save-btn">Save Settings</button>
+
+      </div>
+
+    </section>
+
   </main>
+
+  <!-- CHART JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- JS -->
 
