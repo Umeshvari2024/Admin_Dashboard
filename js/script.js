@@ -112,3 +112,10 @@ new Chart(userChart, {
   }
 
 });
+const saveBtn = document.querySelector(".save-btn");
+saveBtn.addEventListener("click", () => {
+    let x = document.getElementById("toast");
+    x.innerText = "Settings Saved Successfully!";
+    x.className = "show";
+    setTimeout(() => { x.className = x.className.replace("show", ""); }, 3000);
+});
